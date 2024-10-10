@@ -1,0 +1,66 @@
+.EightBall {
+    color: white;
+    width: 300px;
+    height: 300px;
+    margin: 200px auto;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 25px;
+    position: relative;
+    background-color: currentColor;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.5),
+            transparent 30%), currentColor;
+
+
+}
+
+.EightBall p {
+    position: relative;
+    max-width: 70px;
+    text-align: center;
+    font-size: .7rem;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 2;
+    text-shadow: 1px -1px 1px black;
+}
+
+.EightBall::before {
+    position: absolute;
+    content: '';
+    top: 27%;
+    left: 50%;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transform: translateX(-50%);
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 110px solid rgb(20, 51, 136);
+    width: 0;
+    height: 0;
+    z-index: 0;
+}
+
+.EightBall::after {
+    position: absolute;
+    content: '';
+    top: 27%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 68px solid transparent;
+    /* Slightly smaller than the original */
+    border-right: 68px solid transparent;
+    border-bottom: 105px solid rgba(255, 255, 255, 0.1);
+    /* Shadow color */
+    width: 0;
+    height: 0;
+    z-index: 1;
+    /* Place it above the original triangle */
+    filter: blur(2px);
+    /* Blur to simulate a soft shadow */
+}
