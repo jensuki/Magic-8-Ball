@@ -53,14 +53,11 @@
     left: 50%;
     transform: translateX(-50%);
     border-left: 68px solid transparent;
-    /* Slightly smaller than the original */
     border-right: 68px solid transparent;
     border-bottom: 105px solid rgba(255, 255, 255, 0.1);
-    /* Shadow color */
     width: 0;
     height: 0;
     z-index: 1;
-    /* Place it above the original triangle */
     filter: blur(2px);
-    /* Blur to simulate a soft shadow */
+
 }
