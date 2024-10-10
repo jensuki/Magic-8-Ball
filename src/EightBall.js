@@ -12,11 +12,19 @@ const EightBall = ({ answers }) => {
         setMsg(msg);
         setColor(color);
     }
+    const restart = () => {
+        setMsg('Think of a Question');
+        setColor('black');
+
+    }
     return (
-        <div className="EightBall"
-            onClick={handleClick}
-            style={{ backgroundColor: color }}>
-            <p>{msg}</p>
+        <div className="EightBall-container">
+            <div className="EightBall"
+                onClick={handleClick}
+                style={{ backgroundColor: color }}>
+                <p>{msg}</p>
+            </div>
+            <button className="EightBall-reset" onClick={restart}>Reset</button>
         </div>
     )
 
